@@ -220,8 +220,8 @@ def create_acc_commands_mix_scc(CP, packer, enabled, accel, upper_jerk, lower_je
   # SCC14.ACCMode: Init: 0, Brake: 4, Accel:2, Cruise: 1   KONA_EV에서 측정함.
   if makeNewCommands:
     scc14_values = {
-      "ComfortBandUpper": comfortBandUpper, # stock usually is 0 but sometimes uses higher values
-      "ComfortBandLower": comfortBandLower, # stock usually is 0 but sometimes uses higher values
+      "ComfortBandUpper": 0 #comfortBandUpper, # stock usually is 0 but sometimes uses higher values
+      "ComfortBandLower": 0 #comfortBandLower, # stock usually is 0 but sometimes uses higher values
       "JerkUpperLimit": jerkUpperLimit, # stock usually is 1.0 but sometimes uses higher values
       "JerkLowerLimit": jerkLowerLimit, # stock usually is 0.5 but sometimes uses higher values
       "ACCMode": scc14_accMode, #0 if not enabled else 4 if brakePressed else 2 if enabled and long_override else 1 if longEnabled else 4, # stock will always be 4 instead of 0 after first disengage
